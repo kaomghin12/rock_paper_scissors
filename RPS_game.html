@@ -4,15 +4,22 @@
         <title>Rock Paper Scissors!</title>
         <script type="text/javascript" src="computerPlay.js"></script>
         <script type="text/javascript" src="singleRound.js"></script>
+        <script type="text/javascript" src="RPS_game.js"></script>
     </head>
     <body>
         <script>
-            let playerChoice = prompt('Rock, paper or scissors?');
-            let compChoice = computerPlay();
+            const playerWins, computerWins = game();
 
-            let result = singleRound(playerChoice, compChoice);
+//            if (playerWins > computerWins) {
+//                alert('Congratulations!  You whooped the computers ass, ' 
+//                + playerWins + ' to ' + computerWins + '.');
+//            } else {
+//                alert('Aww, sorry, the computer beat you ' + computerWins 
+//                + ' to ' + playerWins + '. Try again!');
+//            }
 
-            console.log(result);
+            alert(playerWins);
+            alert(computerWins);
         </script>    
     </body>
 </html>
