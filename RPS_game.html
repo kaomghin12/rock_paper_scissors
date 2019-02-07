@@ -8,18 +8,17 @@
     </head>
     <body>
         <script>
-            const playerWins, computerWins = game();
+            let gameResults = game();
 
-//            if (playerWins > computerWins) {
-//                alert('Congratulations!  You whooped the computers ass, ' 
-//                + playerWins + ' to ' + computerWins + '.');
-//            } else {
-//                alert('Aww, sorry, the computer beat you ' + computerWins 
-//                + ' to ' + playerWins + '. Try again!');
-//            }
+            if (gameResults.playerWins > gameResults.computerWins) {
+                alert('Congratulations!  You whooped the computers ass, ' + 
+                gameResults.playerWins + ' to ' + gameResults.computerWins + 
+                '.');
+            } else {
+                alert('Aww, sorry, the computer beat you ' + gameResults.computerWins + 
+                ' to ' + gameResults.playerWins + '. Try again!');
+            }
 
-            alert(playerWins);
-            alert(computerWins);
         </script>    
     </body>
 </html>

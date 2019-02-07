@@ -1,7 +1,7 @@
 function game() {
     let rounds = 5;
-    const playerWins = 0;
-    const computerWins = 0;
+    let playerWins = 0;
+    let computerWins = 0;
 
     while (rounds >= 1 && playerWins <=3 || rounds >= 1 && computerWins <= 3) {
         let playerChoice = prompt('Rock, paper or scissors?');
@@ -10,7 +10,7 @@ function game() {
         let result = singleRound(playerChoice, compChoice);
 
         if (result === 'win') {
-            console.log('You Won!, next round!');
+            alert('You Won!, next round!');
             playerWins++;
             rounds--;
         } else if (result === 'lose') {
