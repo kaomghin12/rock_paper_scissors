@@ -4,17 +4,22 @@ function game() {
     let computerWins = 0;
 
     while (rounds >= 1 && playerWins <=3 || rounds >= 1 && computerWins <= 3) {
-        let playerChoice = prompt('Rock, paper or scissors?');
+        let playerChoice = prompt('Rock, paper or scissors?', 'Rock');
         let compChoice = computerPlay();
 
         let result = singleRound(playerChoice, compChoice);
 
+        playerChoice = playerChoice.toUpperCase();
+        compChoice = compChoice.toUpperCase();
+
         if (result === 'win') {
-            alert('You Won!, next round!');
+            alert('You Won! ' + playerChoice + ' beats ' + compChoice +
+             ', so you\'re on to the next round!');
             playerWins++;
             rounds--;
         } else if (result === 'lose') {
-            alert('You lost! You\'ll have to do better than that!');
+            alert('You lost! ' + compChoice + ' beats ' + playerChoice +
+             '. You\'ll have to do better than that!');
             computerWins++;
             rounds--;
         } else {
